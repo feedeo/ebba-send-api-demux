@@ -13,7 +13,7 @@ describe('Send', () => {
   before(() => {
     Request = td.object([ 'post' ])
 
-    Logger = td.object([ 'error' ])
+    Logger = td.object([ 'warn' ])
   })
 
   afterEach(() => td.reset())

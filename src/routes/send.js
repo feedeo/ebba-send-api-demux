@@ -56,7 +56,7 @@ class Send extends Route {
     const options = { url, json: payload, qs: query }
 
     return Request.post(options)
-      .catch((error) => Logger.error(error.message))
+      .catch((error) => Logger.warn(error.message))
   }
 
   auth () {
