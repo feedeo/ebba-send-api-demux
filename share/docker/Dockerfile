@@ -22,9 +22,7 @@ WORKDIR $HOME
 # Install app
 COPY src $HOME/src
 COPY share $HOME/share
-COPY locale $HOME/locale
 COPY package.json $HOME
-COPY share/docker/.npmrc $HOME
 
 # Install app dependencies
 RUN npm install --production
