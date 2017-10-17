@@ -1,0 +1,13 @@
+server:
+  image: feedeo/ebba-send-api-demux:latest
+  restart: always
+  ports:
+    - 5928:3000
+
+lb:
+  image: rancher/load-balancer-service
+  restart: always
+  ports:
+    - 5927:5928
+  links:
+    - server:server

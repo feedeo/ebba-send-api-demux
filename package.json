@@ -1,0 +1,61 @@
+{
+  "name": "ebba-send-api-demux",
+  "description": "Ebba's Send API Demultiplexer",
+  "version": "0.0.0",
+  "author": "Hugo Freire <hugo@feedeo.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feedeo/ebba-send-api-demux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feedeo/ebba-send-api-demux/issues"
+  },
+  "homepage": "https://github.com/feedeo/ebba-send-api-demux#readme",
+  "dependencies": {
+    "health-checkup": "1.0.14",
+    "lodash": "4.17.4",
+    "modern-logger": "1.4.0",
+    "request-on-steroids": "1.1.6",
+    "serverful": "1.1.19"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "eslint": "4.7.2",
+    "@feedeo/eslint-config-feedeo": "1.0.3",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-json": "1.2.0",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "eslint-plugin-unicorn": "2.1.2",
+    "istanbul": "0.4.5",
+    "last-release-github": "1.1.1",
+    "mocha": "3.5.3",
+    "pre-git": "3.15.3",
+    "semantic-release": "7.0.2",
+    "testdouble": "3.2.6"
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "conventional"
+    }
+  },
+  "release": {
+    "getLastRelease": "last-release-github",
+    "analyzeCommits": "simple-commit-message"
+  },
+  "scripts": {
+    "commit": "./node_modules/.bin/commit-wizard",
+    "clean": "rm -rf coverage",
+    "lint": "node_modules/.bin/eslint . --ext .json --ext .js",
+    "coverage": "node_modules/.bin/istanbul cover --include-all-sources --root src --print detail ./node_modules/mocha/bin/_mocha -- --recursive test",
+    "test": "npm run lint && npm run coverage",
+    "semantic-release": "./node_modules/.bin/semantic-release pre && node_modules/.bin/semantic-release post",
+    "build": "pushd ./share/docker; NAME=$npm_package_name ./hooks/build; popd",
+    "push": "pushd ./share/docker; NAME=$npm_package_name ./hooks/push; popd",
+    "start": "node src/app.js"
+  }
+}

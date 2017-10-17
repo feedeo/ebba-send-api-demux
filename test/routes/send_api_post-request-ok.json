@@ -1,0 +1,11 @@
+{
+  "sender": {
+    "id": "my-company-id"
+  },
+  "recipient": {
+    "id": "my-user-id"
+  },
+  "message": {
+    "text": "my-text-message"
+  }
+}

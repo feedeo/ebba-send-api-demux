@@ -1,0 +1,3 @@
+{
+  "extends": "@feedeo/eslint-config-feedeo"
+}
