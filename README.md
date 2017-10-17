@@ -4,6 +4,10 @@
 [![Build Status](https://travis-ci.org/feedeo/ebba-send-api-demux.svg?branch=master)](https://travis-ci.org/feedeo/ebba-send-api-demux)
 [![Coverage Status](https://coveralls.io/repos/github/feedeo/ebba-send-api-demux/badge.svg?branch=master)](https://coveralls.io/github/feedeo/ebba-send-api-demux?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/feedeo/ebba-send-api-demux.svg?token=8bba7d4da58903d25c528315d06549f98f1261382e58c5228f02ff01914025cb&ts=1498125217303)](https://greenkeeper.io/)
+[![](https://img.shields.io/github/release/feedeo/ebba-send-api-demux.svg)](https://github.com/feedeo/ebba-send-api-demux/releases)
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Docker Stars](https://img.shields.io/docker/stars/feedeo/ebba-send-api-demux.svg)](https://hub.docker.com/r/feedeo/ebba-send-api-demux/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/feedeo/ebba-send-api-demux.svg)](https://hub.docker.com/r/feedeo/ebba-send-api-demux/)
 
 Demultiplex Send API requests from Ebba based on the company identifier.
 
