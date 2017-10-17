@@ -1,7 +1,7 @@
 # Ebba's Send API Demultiplexer
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) 
-[![Build Status](https://travis-ci.com/feedeo/ebba-send-api-demux.svg?token=NsysoWmps46xtGqnYwF8&branch=master)](https://travis-ci.com/feedeo/ebba-send-api-demux)
+[![Build Status](https://travis-ci.org/feedeo/ebba-send-api-demux.svg?token=NsysoWmps46xtGqnYwF8&branch=master)](https://travis-ci.com/feedeo/ebba-send-api-demux)
 [![Greenkeeper badge](https://badges.greenkeeper.io/feedeo/ebba-send-api-demux.svg?token=8bba7d4da58903d25c528315d06549f98f1261382e58c5228f02ff01914025cb&ts=1498125217303)](https://greenkeeper.io/)
 
 Demultiplex Send API requests from Ebba based on the company identifier.
