@@ -29,7 +29,7 @@ Swagger documentation available `http://localhost:5928/docs`
 #### Available environment variables
 Variable | Description | Required | Default value
 :---:|:---:|:---:|:---:
-COMPANY_BASE_URLS | Mapping (JSON object) between company identifiers to their base URLs. | false | `{}`
+COMPANY_BASE_URLS | Mapping (JSON object) between company identifiers and their base URLs. | false | `{}`
 PORT | The port to be used by the HTTP server. | false | `3000`
 LOG_LEVEL | The log level verbosity. | false | `info`
 ENVIRONMENT | The environment the app is running on. | false | `undefined`
