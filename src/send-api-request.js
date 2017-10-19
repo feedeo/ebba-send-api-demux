@@ -5,11 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const RequestOnSteroids = require('request-on-steroids')
+const Promise = require('bluebird')
 
-class SendApiRequest extends RequestOnSteroids {
+const Health = require('health-checkup')
+
+const Request = require('request-on-steroids')
+
+class SendApiRequest extends Request {
   constructor (options = {}) {
     super(options)
+
+    Health.addCheck('send-api', () => Promise.try(() => {
+      if (this.circuitBreaker.isOpen()) {
+        throw new Error(`circuit breaker is open`)
+      }
+    }))
   }
 }
 
