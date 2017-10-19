@@ -19,10 +19,11 @@ describe('Send', () => {
   afterEach(() => td.reset())
 
   describe('when handling a request for the send api', () => {
+    const headers = {}
     const token = 'my-access-token'
     const query = { token }
     const payload = require('./send_api_post-request-ok.json')
-    const request = { query, payload }
+    const request = { headers, query, payload }
     let reply
 
     before(() => {
@@ -52,9 +53,10 @@ describe('Send', () => {
           td.verify(Request.post(captor.capture()), { times: 1 })
 
           const options = captor.value
-          options.should.have.nested.property('url', 'http://localhost:5050/response')
+          options.should.have.property('url', 'http://localhost:5050/response')
+          options.should.have.property('headers', headers)
           options.should.have.nested.property('qs.token', token)
-          options.should.have.nested.property('json', payload)
+          options.should.have.property('json', payload)
         })
     })
   })

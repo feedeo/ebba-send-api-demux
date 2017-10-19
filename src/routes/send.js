@@ -34,7 +34,7 @@ class Send extends Route {
     super('POST', '/send', 'Send API Demux', 'Send API Demultiplexer')
   }
 
-  handler ({ query, payload }, reply) {
+  handler ({ query, payload, headers }, reply) {
     if (!_.has(query, 'token')) {
       return reply(Boom.unauthorized())
     }
@@ -53,7 +53,7 @@ class Send extends Route {
 
     const url = _.get(COMPANY_BASE_URLS, companyId)
 
-    const options = { url, json: payload, qs: query }
+    const options = { url, headers, json: payload, qs: query }
 
     return Request.post(options)
       .catch((error) => Logger.warn(error.message))
