@@ -14,7 +14,7 @@
   "homepage": "https://github.com/feedeo/ebba-send-api-demux#readme",
   "dependencies": {
     "bluebird": "3.5.1",
-    "health-checkup": "1.0.15",
+    "health-checkup": "1.0.18",
     "lodash": "4.17.4",
     "modern-logger": "1.4.8",
     "request-on-steroids": "1.1.6",
